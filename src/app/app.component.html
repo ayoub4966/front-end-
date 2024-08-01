@@ -1,0 +1,53 @@
+<!--<app-core></app-core>
+<div *ngIf="test == false; then b2; else bloc1">hello word</div>
+<ng-template #bloc1>
+  <div>thanks</div>
+</ng-template>
+<ng-template #b2>
+  <div>thank you</div>
+</ng-template>
+<div [ngSwitch]="color">
+  <p *ngSwitchCase="'red'">red</p>
+  <p *ngSwitchCase="'green'">green</p>
+</div>
+<div *ngFor="let item of List">
+  <h1>{{ item.name }}</h1>
+  <h1>{{ item.age }}</h1>
+</div>
+<p [ngStyle]="style">Hello Style</p>
+<p [ngStyle]="setStyle()">Hello Style</p>
+<p [ngClass]="classbackground">class backgroud</p>
+<p [ngClass]="setClass()">class backgroud</p>
+<p *ngIf="hasSpecialClass()" [ngClass]="setClass()">class background</p>
+<input
+  type="text"
+  name="value"
+  [(ngModel)]="inputvalue"
+  (ngModelChange)="changevalue()"
+<app-user></app-user>
+/>-->
+<div class="main-container">
+  <app-header></app-header>
+  <div class="content-container">
+    <clr-vertical-nav>
+      <a clrVerticalNavLink routerLink="/List-user" routerLinkActive="active"
+        >List-user</a
+      >
+      <a clrVerticalNavLink routerLink="./add-user" routerLinkActive="active"
+        >add-user</a
+      >
+      <a clrVerticalNavLink routerLink="./logine" routerLinkActive="active"
+        >login</a>
+      <a clrVerticalNavLink routerLink="./snorlax" routerLinkActive="active"
+        >Snorlax</a
+      >
+      <div class="nav-divider"></div>
+      <a clrVerticalNavLink routerLink="./credit" routerLinkActive="active"
+        >Credit</a
+      >
+    </clr-vertical-nav>
+    <div class="content-area">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+
+<form clrStepper [formGroup]="form" (ngSubmit)="submit()">
+  <clr-stepper-panel formGroupName="name">
+    <clr-step-title>Legal Name</clr-step-title>
+    <clr-step-description>Description goes here.</clr-step-description>
+    <clr-step-content *clrIfExpanded>
+      <clr-input-container>
+        <label>First Name</label>
+        <input clrInput formControlName="first" />
+        <clr-control-error *clrIfError="'required'">First Name Required</clr-control-error>
+      </clr-input-container>
+
+      <clr-input-container>
+        <label>Last Name</label>
+        <input clrInput formControlName="last" />
+        <clr-control-error *clrIfError="'required'">Last Name Required</clr-control-error>
+      </clr-input-container>
+
+      <button clrStepButton="next">next</button>
+    </clr-step-content>
+  </clr-stepper-panel>
+
+  <clr-stepper-panel formGroupName="contact">
+    <clr-step-title>Contact Information</clr-step-title>
+    <clr-step-description>Veuillez entrer vos informations de contact</clr-step-description>
+    <clr-step-content *clrIfExpanded>
+      <clr-input-container>
+        <label for="email">Email</label>
+        <input type="email" id="email" clrInput formControlName="email" placeholder="Email" />
+      </clr-input-container>
+      <clr-input-container>
+        <label for="phone">Téléphone</label>
+        <input type="tel" id="phone" clrInput formControlName="phone" placeholder="Téléphone" />
+      </clr-input-container>
+      <button clrStepButton="next">next</button>
+    </clr-step-content>
+  </clr-stepper-panel>
+
+  <clr-stepper-panel formGroupName="password">
+    <clr-step-title>Password</clr-step-title>
+    <clr-step-description>Entrez votre mot de passe</clr-step-description>
+    <clr-step-content *clrIfExpanded>
+      <clr-password-container>
+        <label for="password">Mot de passe</label>
+        <input type="password" id="password" clrPassword formControlName="password" placeholder="Mot de passe" />
+      </clr-password-container>
+      <clr-password-container>
+        <label for="confirmPassword">Confirmer le mot de passe</label>
+        <input type="password" id="confirmPassword" clrPassword formControlName="confirm" placeholder="Confirmer le mot de passe" />
+      </clr-password-container>
+      <button clrStepButton="submit">submit</button>
+    </clr-step-content>
+  </clr-stepper-panel>
+</form>

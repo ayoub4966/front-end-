@@ -1,0 +1,36 @@
+<p>login works!</p>
+<div class="login-wrapper">
+  <form class="login" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <section class="title">
+          <h3 class="welcome">Bienvenue chez</h3>
+          <p>Nom du Produit de l'Entreprise</p>
+          <h5 class="hint">Utilisez votre identifiant d'entreprise pour vous connecter ou créez-en un maintenant</h5>
+      </section>
+      <div class="login-group">
+          <clr-select-container>
+              <label class="clr-sr-only" for="user-role">Rôle de l'utilisateur</label>
+              <select clrSelect id="user-role" formControlName="type">
+                  <option value="local">Utilisateurs locaux</option>
+                  <option value="admin">Administrateur</option>
+              </select>
+          </clr-select-container>
+          <clr-input-container>
+              <label class="clr-sr-only" for="username">Nom d'utilisateur</label>
+              <input type="text" id="username" clrInput placeholder="Nom d'utilisateur" formControlName="username"/>
+          </clr-input-container>
+          <clr-password-container>
+              <label class="clr-sr-only" for="password">Mot de passe</label>
+              <input type="password" id="password" clrPassword placeholder="Mot de passe" formControlName="password"/>
+          </clr-password-container>
+          <clr-checkbox-wrapper>
+              <input type="checkbox" id="rememberMe" clrCheckbox formControlName="rememberMe"/>
+              <label for="rememberMe">Se souvenir de moi</label>
+          </clr-checkbox-wrapper>
+          <div class="error" *ngIf="errorMessage">
+              {{ errorMessage }}
+          </div>
+          <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">SUIVANT</button>
+          <a href="javascript://" class="signup">Inscrivez-vous pour obtenir un identifiant d'entreprise</a>
+      </div>
+  </form>
+</div>

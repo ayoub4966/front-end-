@@ -1,0 +1,23 @@
+.backgroundclass {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+.special {
+  color: rgb(108, 123, 97);
+  font-size: 100;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.saveable {
+  color: #e50859;
+  font-size: 200;
+  font-family: 'Courier New', Courier, monospace;
+}
+.special1{
+  color: blueviolet;
+  font-size: 300;
+}
