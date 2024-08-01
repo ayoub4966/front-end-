@@ -12,6 +12,7 @@ import { ClarityModule } from '@clr/angular';
 import{BrowserAnimationsModule}from'@angular/platform-browser/animations';
 import { AuthentModule } from './authent/authent.module';
 import { HotModule } from './auth/hot.module';
+import { LoginModule } from './login/login.module';
 
 
 @NgModule({
@@ -30,7 +31,7 @@ import { HotModule } from './auth/hot.module';
     ClarityModule,
     BrowserAnimationsModule,
     AuthentModule,
-    HotModule
+    HotModule, LoginModule
   
   ],
   providers: [],
